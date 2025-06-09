@@ -1,0 +1,216 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  padding: 0px;
+}
+          
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+          
+.imagemblogss {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+              
+.imagemblogss h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+.imagemblogss .imagem-fundo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* escurece a imagem */
+  z-index: 1;
+}
+
+.imagem-fundo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagemblogss .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+          
+
+          
+.voltar-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+          
+.voltar-btn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+      
+.content h3 {
+    margin-top: 20px;
+  }
+          
+              
+  form {
+    margin-bottom: 60px;
+}
+          
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+          
+              
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+          
+  textarea {
+    height: 120px;
+}
+          
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+      
+.checkbox input {
+  margin-right: 10px;
+  margin-top: 4px;
+}
+          
+  button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    cursor: not-allowed;
+}
+          
+.titulo-bloco {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+          
+.wrapper-formulario {
+  max-width: 500px;
+  margin: 0 auto;
+}
+          
+.wrapper-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+          
+.wrapper-formulario form button {
+  background: #000;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  width: 100%;
+  cursor: not-allowed;
+}
+    
+.content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.7;
+  color: #333;
+  background: #fff;
+}
+              
+.content h2 {
+  font-size: 37px;
+  margin-bottom: 20px;
+  text-align: center;                       /*tt alinhado*/
+  color: #111;                           /*cor do tt*/
+  border-bottom: 2px solid #007bff;     /*cor da linha embaixo do tt*/
+}
+              
+.content h3 {
+  font-size: 35px;                          /*tamanho do sub tt*/
+  margin-top: 60px;                        /* distanciamento dos sub tt*/
+  color: #111;                          /*cor do sub tt*/
+}
+              
+.content p {
+  font-size: 25px;
+  text-align:justify;                     /*formatação do p*/
+}
+              
+@media (max-width: 600px) {
+        
+.content {
+  padding: 0 15px;
+}
+              
+.content h2 {
+  font-size: 26px;
+}
+              
+.content h3 {
+  font-size: 20px;
+}
+              
+.content p {
+  font-size: 16px;
+}
+
+}
+              
+

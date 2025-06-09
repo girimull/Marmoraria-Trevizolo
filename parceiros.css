@@ -1,0 +1,13 @@
+.parceiros-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px; /* Espaço entre as imagens */
+    padding: 40px 0;
+    flex-wrap: wrap;
+  }
+
+  .parceiro-img {
+    max-width: 200px;
+    height: auto;
+  }
