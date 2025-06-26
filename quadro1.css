@@ -6,7 +6,8 @@ body {
     
 .container {
     display: flex;
-    max-width: 1500px;
+    max-width: 1300px; /*largura*/
+    height: 600px;
     margin: 60px auto;
     background-color: #000;
     color: #fff;
@@ -47,7 +48,7 @@ body {
     
 .imagem-lado, .texto-lado {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
 }
 }
      

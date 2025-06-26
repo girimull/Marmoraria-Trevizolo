@@ -3,281 +3,76 @@
     max-width: 2015px;
     margin: auto;
     overflow: hidden;
-  }
-  
-  .carousel-slide {
+    position: relative;
+    height: 600px; /* altura das imagens */
+}
+
+.carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-item {
+}
+
+.carousel-item {
     position: relative;
     flex: 0 0 100%;
-  }
-  
-  .carousel-item img {
+}
+
+.carousel-item img {
     width: 100%;
     height: 800px;
     object-fit: cover;
     display: block;
-  }
-  
-  .carousel-buttons {
+}
+
+/* Ajuste das setas (definitivo) */
+.carousel-buttons {
     position: absolute;
-    top: 50%;
+    top: 50%; /* meio vertical do container */
     left: 0;
     right: 0;
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none;
+    pointer-events: none; /* botão clicável mas container ignora */
     z-index: 10;
-  }
-  
-  .carousel-buttons button {
-    background-color: none;
+    transform: translateY(-50%); /* centraliza exatamente */
+}
+
+.carousel-buttons button {
+    background-color: transparent;
     color: white;
     border: none;
     padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 2rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .carousel-buttons button:hover {
-    transform: scale(1.2);
-  }
-  
-  .carousel-btn {
-    position: relative;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2.5rem;
-    cursor: pointer;
-    pointer-events: auto;
-    transition: transform 0.2s;
-  }
-  
-  .prev {
-    margin-left: 10px;
-  }
-  
-  .next {
-    margin-right: 10px;
-  }
-  
-.carousel-container {
-  position: relative; /* necessário para o posicionamento do botão */
-  width: 100%;
-  max-width: 2015px;
-  margin: auto;
-  overflow: hidden;
-  max-height: 800px; /* ou ajuste conforme altura da imagem */
+    transition: transform 0.3s ease;
+    pointer-events: auto; /* ativa clique nos botões */
 }
 
+.carousel-buttons button:hover {
+    transform: scale(1.2);
+}
 .orcamento-btn {
   position: absolute;
-  top: 90%; /* centraliza verticalmente */
-  left: 50%; /* centraliza horizontalmente */
-  transform: translate(-50%, -50%);
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  background-color: transparent;
   color: white;
-  padding: 15px 30px;
-  font-size: 20px;
-  font-family: 'Arial', sans-serif;
-  border: none;
-  border-radius: 30px;
   text-decoration: none;
-  z-index: 10;
   font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border: 2px solid white;
+  border-radius: 5px;
+  z-index: 20; /* acima das imagens e botões */
+  cursor: pointer;
+  pointer-events: auto;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .orcamento-btn:hover {
-  background-color: #111
+  background-color: white;
+  color: #007bff;
 }
 
-  
-  
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  .carousel2-container {
-    width: 100%;
-    max-width: 2015px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .carousel2-slide {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel2-item {
-    position: relative;
-    flex: 0 0 100%;
-  }
-  
-  .carousel2-item img {
-    width: 100%;
-    height: 800px;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .carousel2-buttons {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none;
-    z-index: 10;
-  }
-  
-  .carousel2-buttons button {
-    background-color: transparent;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    font-size: 2rem;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-    pointer-events: auto;
-  }
-  
-  .carousel2-buttons button:hover {
-    transform: scale(1.2);
-  }
-  
-  .orcamento2-btn {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-    color: white;
-    padding: 15px 30px;
-    font-size: 20px;
-    font-family: 'Arial', sans-serif;
-    border: 2px solid white;
-    border-radius: 8px;
-    text-decoration: none;
-    z-index: 5;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .orcamento2-btn:hover {
-    background-color: #c9c9c9;
-    color: #ffffff;
-    border-color: #ffffff;
-  }
-
-
-    .carousel2-container {
-    width: 100%;
-    max-width: 2015px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .carousel2-slide {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel2-item {
-    position: relative;
-    flex: 0 0 100%;
-  }
-  
-  .carousel2-item img {
-    width: 100%;
-    height: 800px;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .carousel2-buttons {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none;
-    z-index: 10;
-  }
-  
-  .carousel2-buttons button {
-    background-color: transparent;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    font-size: 2rem;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-    pointer-events: auto;
-  }
-  
-  .carousel2-buttons button:hover {
-    transform: scale(1.2);
-  }
-  
-  .orcamento2-btn {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-    color: white;
-    padding: 15px 30px;
-    font-size: 20px;
-    font-family: 'Arial', sans-serif;
-    border: 2px solid white;
-    border-radius: 8px;
-    text-decoration: none;
-    z-index: 5;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .orcamento2-btn:hover {
-    background-color: #c9c9c9;
-    color: #ffffff;
-    border-color: #ffffff;
-  }
-
-
-
-
-
-  
- 
-  

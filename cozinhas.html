@@ -12,58 +12,55 @@
 
 <body>
   <header>
-          <div class="header-main">
-        <!-- posição dos links -->
-        <nav class="menu-left">
-          <ul>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li class="has-submenu">
-              <a href="mostruario.html">Mostruário</a>
-              <ul class="submenu">
-                <li><a href="banheiros.html">Banheiros</a></li>
-                <li><a href="areaexterna.html">Áreas externas</a></li>
-                <li><a href="escadas.html">Escadas</a></li>
-                <li><a href="cozinhas.html">Cozinhas</a></li>
-                <li><a href="balcoes.html">Balcões</a></li>
-                <li><a href="nichos.html">Nichos</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-  
-        <!-- Logo -->
-        <div class="logo">
-          <a href="index.html">
-            <img src="img/ChatGPT Image 10 de mai. de 2025, 19_18_45.png" alt="Logo">
-          </a>
-        </div>
-  
-        <!-- posição dos links -->
-        <nav class="menu-right">
-          <ul>
-            <li class="has-submenu">
-              <a href="materiais.html">Produtos</a>
-              <ul class="submenu">
-                <li><a href="marmore.html">Mármore</a></li>
-                <li><a href="granitos.html">Granitos</a></li>
-                <li><a href="sinteticos.html">Sintéticos</a></li>
-              </ul>
-            </li>
-            <li><a href="contatos.html">Contatos</a></li>
-          </ul>
-        </nav>
-  
-        <div class="header-top">
-          <a href="https://wa.link/q0dqn8" target="_blank"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.instagram.com/marmoraria.trevizolo/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://google.com" target="_blank"><i class="fab fa-google"></i></a>
-        </div>
-  
-        <button class="menu-toggle" onclick="toggleMenu()">
-          <i class="fas fa-bars"></i>
-        </button>
+    <div class="header-main">
+      <nav class="menu-left">
+        <ul>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li class="has-submenu">
+            <a href="#">Mostruário</a>
+            <ul class="submenu">
+              <li><a href="banheiros.html">Banheiros</a></li>
+              <li><a href="areaexterna.html">Áreas externas</a></li>
+              <li><a href="escadas.html">Escadas</a></li>
+              <li><a href="cozinhas.html">Cozinhas</a></li>
+              <li><a href="balcoes.html">Balcões</a></li>
+              <li><a href="nichos.html">Nichos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/ChatGPT Image 10 de mai. de 2025, 19_18_45.png" alt="Logo">
+        </a>
       </div>
+
+      <nav class="menu-right">
+        <ul>
+          <li class="has-submenu">
+            <a href="#.html">Produtos</a>
+            <ul class="submenu">
+              <li><a href="marmore.html">Mármore</a></li>
+              <li><a href="granitos.html">Granitos</a></li>
+              <li><a href="sinteticos.html">Sintéticos</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-top">
+        <a href="https://wa.link/q0dqn8" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/marmoraria.trevizolo/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://google.com" target="_blank"><i class="fab fa-google"></i></a>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      </div>
+
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
   </header>
 
   <!-- Imagem de destaque -->
@@ -133,51 +130,7 @@
   </div>
 </div>
 
-  <!-- Comentários -->
-  <section class="comentarios">
-    <h2>COMENTÁRIOS</h2>
-    <div class="wrapper-formulario">
-      <p><strong>Deixe um comentário</strong></p>
-      <form>
-        <label for="comentario">Comentário *</label>
-        <textarea id="comentario" placeholder="Escreva aqui..." disabled></textarea>
-
-        <label for="nome">Nome *</label>
-        <input type="text" id="nome" placeholder="Seu nome" disabled>
-
-        <label for="email">E-mail *</label>
-        <input type="email" id="email" placeholder="seuemail@exemplo.com" disabled>
-
-        <div class="checkbox">
-          <input type="checkbox" id="salvar" disabled>
-          <label for="salvar">Salvar meus dados neste navegador para a próxima vez que eu comentar.</label>
-        </div>
-
-        <div class="checkbox">
-          <input type="checkbox" id="privacidade" disabled>
-          <label for="privacidade">Ao utilizar este formulário concordo com o armazenamento e tratamento dos meus dados por este site.</label>
-        </div>
-
-        <button type="button" disabled>Publicar comentário</button>
-      </form>
-    </div>
-  </section>
-
-  <hr><br>
-
-  <!-- Formulário de orçamento -->
-  <div class="wrapper-formulario">
-    <div class="titulo-bloco">SOLICITE O SEU ORÇAMENTO</div>
-    <h1>ENVIE SEU E-MAIL AQUI</h1>
-    <form>
-      <input type="text" placeholder="Nome" disabled>
-      <input type="text" placeholder="Telefone" disabled>
-      <input type="email" placeholder="E-mail" disabled>
-      <textarea placeholder="Mensagem" disabled></textarea>
-      <button type="button" disabled>Enviar</button>
-    </form>
-  </div>
-
+  
   <!-- Rodapé -->
   <footer class="footer">
     <div class="footer-top">

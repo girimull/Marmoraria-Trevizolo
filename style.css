@@ -22,18 +22,18 @@
   /* HEADER */
   header {
     background-color: #007bff;
-    padding: 10px 20px;
+    padding: 5px 1px;
   }
   
   .header-top {
     display: flex;
     justify-content: flex-end;
-    gap: 15px;
+    gap: 10px;
   }
   
   .header-top a {
     color: #fff;
-    font-size: 30px;
+    font-size: 20px;
   }
   
   .header-top a:hover {
@@ -114,7 +114,7 @@
   }
   
   .logo a img {
-    height: 90px;
+    height: 60px;
     max-width: 100%;
   }
   

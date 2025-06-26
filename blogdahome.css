@@ -1,9 +1,9 @@
 .blog-container {
     display: flex;
     justify-content: center;
-    gap: 180px;
+    gap: 150px;
     flex-wrap: wrap;
-    padding: 40px 20px;
+    padding: 20px 10px;
   }
 
   .blog-card {
