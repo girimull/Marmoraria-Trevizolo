@@ -18,35 +18,3 @@ function prevSlide1() {
 }
 
 setInterval(nextSlide1, 7000);
-
- /* Botão hamburguer só no mobile */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Esconde menus no mobile */
-@media (max-width: 900px) {
-  .menu-left ul,
-  .menu-right ul {
-    display: none;
-    flex-direction: column;
-    background: white;
-    padding: 10px;
-    margin: 0;
-  }
-
-  /* Mostra quando o JS adiciona .active */
-  .menu-left.active ul,
-  .menu-right.active ul {
-    display: flex;
-  }
-
-  /* Mostra o botão no mobile */
-  .menu-toggle {
-    display: block;
-  }
-}
