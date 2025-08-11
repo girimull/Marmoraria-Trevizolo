@@ -132,3 +132,31 @@
   }
 }
 
+/* Torna o submenu visível quando o pai tem a classe active */
+.menu-left.active .submenu,
+.menu-right.active .submenu {
+  display: block !important; /* garante que mostre */
+  opacity: 1 !important;
+  visibility: visible !important;
+  height: auto !important;
+  pointer-events: auto;
+}
+
+/* Inicialmente, submenus escondidos */
+.submenu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Para hover no desktop */
+.has-submenu:hover > .submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  pointer-events: auto;
+}
