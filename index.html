@@ -185,6 +185,17 @@ function toggleMenu() {
   menuLeft.classList.toggle('active');
   menuRight.classList.toggle('active');
 }
+    // Abre ou fecha submenu no mobile ao clicar no item com submenu
+document.querySelectorAll('.has-submenu > a').forEach(link => {
+  link.addEventListener('click', e => {
+    if(window.innerWidth <= 900) {
+      e.preventDefault(); // prevenir link normal
+      const parent = link.parentElement;
+      parent.classList.toggle('open');
+    }
+  });
+});
+
 </script>
 
 </body>
