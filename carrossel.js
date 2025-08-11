@@ -19,3 +19,13 @@ function prevSlide1() {
 
 setInterval(nextSlide1, 7000);
 
+ .menu-left.active ul,
+  .menu-right.active ul {
+    display: flex;
+  }
+
+  /* Mostra o botão no mobile */
+  .menu-toggle {
+    display: block;
+  }
+}
