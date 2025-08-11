@@ -87,76 +87,95 @@
   cursor: pointer;
 }
 
-/* Mobile styles */
+/* Esconder menus no mobile por padrão */
 @media (max-width: 900px) {
-  /* Mostrar botão */
-  .menu-toggle {
-    display: block;
-    position: relative;
-    z-index: 9999;
-  }
-
-  /* Inicialmente esconder menus */
   .menu-left,
   .menu-right {
-    display: none;
+    display: none; /* esconde tudo */
     position: absolute;
     top: 60px; /* ajuste conforme seu header */
     left: 0;
     right: 0;
     background: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 9998;
+    z-index: 1000;
   }
 
-  /* Quando ativo, mostrar menus */
+  /* Mostrar menu principal quando ativo */
   .menu-left.active,
   .menu-right.active {
     display: block;
   }
 
-  /* Ajustar listas para coluna */
+  /* Listas dentro do menu */
   .menu-left ul,
   .menu-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    gap: 12px;
   }
 
-  .menu-left ul li,
-  .menu-right ul li {
-    margin: 8px 0;
+  /* Links do menu */
+  .menu-left ul li a,
+  .menu-right ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  /* Submenus */
+  .submenu {
+    display: none;
+    padding-left: 15px;
+    margin-top: 8px;
+    flex-direction: column;
+  }
+
+  /* Mostrar submenu ao passar o mouse no desktop */
+  @media (min-width: 901px) {
+    .submenu {
+      display: none; /* ocultar no desktop até hover */
+      position: absolute;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 10px;
+      margin-top: 0;
+      left: 0;
+      top: 100%;
+      z-index: 1000;
+    }
+    .has-submenu:hover > .submenu {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* Mostrar submenu no mobile quando o pai tem 'open' (classe que vamos usar via JS) */
+  .has-submenu.open > .submenu {
+    display: flex;
+  }
+
+  /* Cursor para indicar submenu clicável */
+  .has-submenu > a {
+    cursor: pointer;
   }
 }
 
-/* Torna o submenu visível quando o pai tem a classe active */
-.menu-left.active .submenu,
-.menu-right.active .submenu {
-  display: block !important; /* garante que mostre */
-  opacity: 1 !important;
-  visibility: visible !important;
-  height: auto !important;
-  pointer-events: auto;
-}
-
-/* Inicialmente, submenus escondidos */
-.submenu {
+/* Mostrar botão hambúrguer no mobile */
+.menu-toggle {
   display: none;
-  opacity: 0;
-  visibility: hidden;
-  height: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-/* Para hover no desktop */
-.has-submenu:hover > .submenu {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  height: auto;
-  pointer-events: auto;
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
 }
