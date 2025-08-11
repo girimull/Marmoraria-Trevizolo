@@ -60,6 +60,15 @@
 
       <button class="menu-toggle" onclick="toggleMenu()">
         <i class="fas fa-bars"></i>
+        <script>
+function toggleMenu() {
+  const menuLeft = document.querySelector('.menu-left');
+  const menuRight = document.querySelector('.menu-right');
+  menuLeft.classList.toggle('active');
+  menuRight.classList.toggle('active');
+}
+</script>
+
       </button>
     </div>
   </header>
