@@ -149,3 +149,23 @@
     cursor: pointer;
   }
 }
+@media (max-width: 900px) {
+  .menu-left,
+  .menu-right {
+    background: #007bff; /* cor do seu menu */
+    color: white; /* deixa o texto visível */
+  }
+  .menu-left ul li a,
+  .menu-right ul li a {
+    color: white; /* links brancos no fundo escuro */
+  }
+  .has-submenu > a {
+    color: white;
+  }
+  /* Se quiser mudar a cor do hover nos links: */
+  .menu-left ul li a:hover,
+  .menu-right ul li a:hover {
+    color: #cce5ff;
+  }
+}
+
