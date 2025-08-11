@@ -87,36 +87,40 @@
   cursor: pointer;
 }
 
-/* Esconder menus no mobile por padrão */
 @media (max-width: 900px) {
-  .menu-left,
-  .menu-right {
-    display: none; /* esconde tudo */
-    position: absolute;
-    top: 60px; /* ajuste conforme seu header */
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 15px 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1000;
+  /* Mostrar botão hambúrguer */
+  .menu-toggle {
+    display: block;
+    position: relative;
+    z-index: 9999;
   }
 
-  /* Mostrar menu principal quando ativo */
+  /* Esconder menus inicialmente */
+  .menu-left,
+  .menu-right {
+    display: none;
+    position: static; /* para empilhar no fluxo normal */
+    width: 100%;
+    background: #fefefe; /* fundo claro (ajuste se quiser) */
+    padding: 10px 15px;
+    box-shadow: none; /* sem sombra para ficar simples */
+  }
+
+  /* Mostrar menus quando ativo */
   .menu-left.active,
   .menu-right.active {
     display: block;
   }
 
-  /* Listas dentro do menu */
+  /* Listas no menu */
   .menu-left ul,
   .menu-right ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 10px;
   }
 
   /* Links do menu */
@@ -124,58 +128,24 @@
   .menu-right ul li a {
     color: #333;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   /* Submenus */
   .submenu {
     display: none;
-    padding-left: 15px;
-    margin-top: 8px;
     flex-direction: column;
+    margin-left: 15px;
+    margin-top: 5px;
   }
 
-  /* Mostrar submenu ao passar o mouse no desktop */
-  @media (min-width: 901px) {
-    .submenu {
-      display: none; /* ocultar no desktop até hover */
-      position: absolute;
-      background: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 10px;
-      margin-top: 0;
-      left: 0;
-      top: 100%;
-      z-index: 1000;
-    }
-    .has-submenu:hover > .submenu {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  /* Mostrar submenu no mobile quando o pai tem 'open' (classe que vamos usar via JS) */
+  /* Mostrar submenu quando o pai tem .open */
   .has-submenu.open > .submenu {
     display: flex;
   }
 
-  /* Cursor para indicar submenu clicável */
+  /* Indica que o link tem submenu */
   .has-submenu > a {
     cursor: pointer;
-  }
-}
-
-/* Mostrar botão hambúrguer no mobile */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-@media (max-width: 900px) {
-  .menu-toggle {
-    display: block;
   }
 }
